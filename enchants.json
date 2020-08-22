@@ -1,0 +1,250 @@
+[
+    {
+        "name": "Cleave",
+        "maxLevel": 5
+    },
+    {
+        "name": "Critical",
+        "maxLevel": 5
+    },
+    {
+        "name": "Cubism",
+        "maxLevel": 5
+    },
+    {
+        "name": "Dragon Hunter",
+        "maxLevel": 1
+    },
+    {
+        "name": "Ender Slayer",
+        "maxLevel": 5
+    },
+    {
+        "name": "Execute",
+        "maxLevel": 5
+    },
+    {
+        "name": "Experience",
+        "maxLevel": 3
+    },
+    {
+        "name": "First Strike",
+        "maxLevel": 4
+    },
+    {
+        "name": "Giant Killer",
+        "maxLevel": 5
+    },
+    {
+        "name": "Impaling",
+        "maxLevel": 3
+    },
+    {
+        "name": "Lethality",
+        "maxLevel": 5
+    },
+    {
+        "name": "Life Steal",
+        "maxLevel": 3
+    },
+    {
+        "name": "Luck",
+        "maxLevel": 5
+    },
+    {
+        "name": "Scavenger",
+        "maxLevel": 3
+    },
+    {
+        "name": "Thunderlord",
+        "maxLevel": 5
+    },
+    {
+        "name": "Telekinesis",
+        "maxLevel": 1
+    },
+    {
+        "name": "Vampirism",
+        "maxLevel": 2
+    },
+    {
+        "name": "Venomous",
+        "maxLevel": 5
+    },
+    {
+        "name": "Growth",
+        "maxLevel": 5
+    },
+    {
+        "name": "Sugar Rush",
+        "maxLevel": 3
+    },
+    {
+        "name": "Aiming",
+        "maxLevel": 5
+    },
+    {
+        "name": "Cubism",
+        "maxLevel": 5
+    },
+    {
+        "name": "Dragon Hunter",
+        "maxLevel": 1
+    },
+    {
+        "name": "Impaling",
+        "maxLevel": 3
+    },
+    {
+        "name": "Infinite Quiver",
+        "maxLevel": 5
+    },
+    {
+        "name": "Piercing",
+        "maxLevel": 1
+    },
+    {
+        "name": "Snipe",
+        "maxLevel": 3
+    },
+    {
+        "name": "Experience",
+        "maxLevel": 3
+    },
+    {
+        "name": "Harvesting",
+        "maxLevel": 5
+    },
+    {
+        "name": "Rainbow",
+        "maxLevel": 1
+    },
+    {
+        "name": "Smelting Touch",
+        "maxLevel": 1
+    },
+    {
+        "name": "Angler",
+        "maxLevel": 5
+    },
+    {
+        "name": "Blessing",
+        "maxLevel": 5
+    },
+    {
+        "name": "Caster",
+        "maxLevel": 5
+    },
+    {
+        "name": "Frail",
+        "maxLevel": 5
+    },
+    {
+        "name": "Magnet",
+        "maxLevel": 5
+    },
+    {
+        "name": "Spiked Hook",
+        "maxLevel": 5
+    },
+    {
+        "name": "Bane of Anthropods",
+        "maxLevel": 5
+    },
+    {
+        "name": "Fire Aspect",
+        "maxLevel": 2
+    },
+    {
+        "name": "Looting",
+        "maxLevel": 3
+    },
+    {
+        "name": "Knockback",
+        "maxLevel": 2
+    },
+    {
+        "name": "Sharpness",
+        "maxLevel": 5
+    },
+    {
+        "name": "Smite",
+        "maxLevel": 5
+    },
+    {
+        "name": "Aqua Affinity",
+        "maxLevel": 1
+    },
+    {
+        "name": "Blast Protection",
+        "maxLevel": 5
+    },
+    {
+        "name": "Depth Strider",
+        "maxLevel": 3
+    },
+    {
+        "name": "Feather Falling",
+        "maxLevel": 5
+    },
+    {
+        "name": "Fire Protection",
+        "maxLevel": 5
+    },
+    {
+        "name": "Frost Walker",
+        "maxLevel": 2
+    },
+    {
+        "name": "Projectile Protection",
+        "maxLevel": 5
+    },
+    {
+        "name": "Protection",
+        "maxLevel": 5
+    },
+    {
+        "name": "Respiration",
+        "maxLevel": 3
+    },
+    {
+        "name": "Thorns",
+        "maxLevel": 3
+    },
+    {
+        "name": "Flame",
+        "maxLevel": 1
+    },
+    {
+        "name": "Power",
+        "maxLevel": 5
+    },
+    {
+        "name": "Punch",
+        "maxLevel": 2
+    },
+    {
+        "name": "Efficiency",
+        "maxLevel": 5
+    },
+    {
+        "name": "Fortune",
+        "maxLevel": 3
+    },
+    {
+        "name": "Silk Touch",
+        "maxLevel": 1
+    },
+    {
+        "name": "Looting",
+        "maxLevel": 3
+    },
+    {
+        "name": "Lure",
+        "maxLevel": 5
+    },
+    {
+        "name": "Luck of the Sea",
+        "maxLevel": 5
+    }
+]
