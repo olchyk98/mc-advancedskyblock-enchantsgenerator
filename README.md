@@ -1,2 +1,1 @@
-# mc-advancedskyblock-enchantsgenerator
-[]
+[TODO: Simplified Documentation]
