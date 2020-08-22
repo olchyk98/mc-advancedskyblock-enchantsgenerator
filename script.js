@@ -8,7 +8,7 @@ const DOM_OBJ_REFS = {
     "ENCHANTS_CHECKBOXES_CONTAINER": document.querySelector("#container-enchants"),
 }
 const EGYPTIAN_NUMBERS = [
-    "",
+    "nfr",
     "I",
     "II",
     "III",
