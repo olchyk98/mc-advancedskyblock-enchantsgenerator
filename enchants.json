@@ -84,18 +84,6 @@
         "maxLevel": 5
     },
     {
-        "name": "Cubism",
-        "maxLevel": 5
-    },
-    {
-        "name": "Dragon Hunter",
-        "maxLevel": 1
-    },
-    {
-        "name": "Impaling",
-        "maxLevel": 3
-    },
-    {
         "name": "Infinite Quiver",
         "maxLevel": 5
     },
@@ -105,10 +93,6 @@
     },
     {
         "name": "Snipe",
-        "maxLevel": 3
-    },
-    {
-        "name": "Experience",
         "maxLevel": 3
     },
     {
@@ -234,10 +218,6 @@
     {
         "name": "Silk Touch",
         "maxLevel": 1
-    },
-    {
-        "name": "Looting",
-        "maxLevel": 3
     },
     {
         "name": "Lure",

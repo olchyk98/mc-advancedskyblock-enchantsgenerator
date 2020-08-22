@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application [olesodynets]</title>
     <script defer="defer" src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css"/>
   </head>
 
-  <body>
-    <h3>1. Select enchantments:</h3>
-    <div class="container-enchants">
-        Loading...
-    </div>
-    <br/>
+  <body style="font-family:Arial">
     <h3>2. Copy the constructed strings:</h3>
     <p>Enchants to Match:
-      <strong>NULL</strong>
+      <strong class="enchantslabel-output" name="match">NONE</strong>
     </p>
     <p>Enchants to Exclude:
-      <strong>NULL</strong>
+      <strong class="enchantslabel-output" name="exclude">NONE</strong>
     </p>
+    <h3>1. Select enchantments:</h3>
+    <input placeholder="Search" type="search" id="enchantments-searchinput" disabled />
+    <div id="container-enchants" class="container-enchants">
+      Loading...
+    </div>
     <br/>
   </body>
 
