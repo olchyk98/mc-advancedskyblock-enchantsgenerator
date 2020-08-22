@@ -1,0 +1,2 @@
+# mc-advancedskyblock-enchantsgenerator
+[]
