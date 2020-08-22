@@ -16,8 +16,8 @@ const EGYPTIAN_NUMBERS = [
     "V",
 ];
 
-const ALL_NAMES = new Set();
-const SELECTED_NAMES = new Set();
+const ALL_ENCHANTS = [];
+let SELECTED_ENCHANTS = [];
 
 // TODO: Implement search
 const htmlGenerators = {
@@ -64,40 +64,35 @@ async function fetchEnchants(targetURL = ENCHANTS_URL) {
     }
 
     // Add enchs levels
-    const enchants = [];
-
     for (let enchant of responseJSON) {
         for (let ma = 1; ma <= enchant.maxLevel; ++ma) {
             // Generate name
-            const name = `${enchant.name} ${EGYPTIAN_NUMBERS[ma]}`;
+            const fullName = `${enchant.name} ${EGYPTIAN_NUMBERS[ma]}`;
 
-            // Add to ALL_NAMES
-            ALL_NAMES.add(name);
-
-            // Add to enchants
-            enchants.push(name);
+            // Add to ALL_ENCHANTS
+            ALL_ENCHANTS.push({
+                ...enchant,
+                enchantName: enchant.name,
+                name: fullName,
+            });
         }
     }
-
-    // Return response
-    return enchants;
 }
 
-function displayEnchantCheckboxes(enchants, filterName = "") {
+function displayEnchantCheckboxes(enchants = ALL_ENCHANTS, filterName = "") {
     // References
     const container = DOM_OBJ_REFS["ENCHANTS_CHECKBOXES_CONTAINER"];
-    const state = SELECTED_NAMES;
 
     // Clear the container content
     container.innerHTML = '';
 
     // Apply filter
     const filteredEnchants = (!filterName) ? enchants : (
-        enchants.filter(name => {
-            const nameLower = name.toLowerCase();
+        enchants.filter(item => {
+            const nameLower = item.name.toLowerCase();
             const filterNameLower = filterName.toLowerCase();
 
-            return (name.length > filterName.length) ?
+            return (item.name.length > filterName.length) ?
                 nameLower.includes(filterNameLower) :
                 filterNameLower.includes(nameLower)
 
@@ -110,11 +105,14 @@ function displayEnchantCheckboxes(enchants, filterName = "") {
 
         // Generate HTML
         const checkboxElementHTML = htmlGenerators["ENCHANT_CHECKBOX"](
-            convertNameToNodeID(enchant), enchant
+            convertNameToNodeID(enchant.name), enchant.name
         );
 
         // Parse HTML
         const checkboxElement = htmlGenerators["__convertToNode"](checkboxElementHTML);
+
+        // Link state
+        checkboxElement.querySelector("input").checked = SELECTED_ENCHANTS.includes(enchant);
 
         // Add the click listener
         checkboxElement.addEventListener('change', e => {
@@ -122,9 +120,9 @@ function displayEnchantCheckboxes(enchants, filterName = "") {
 
             // REFACTOR: Can be written in one line using ? operator [Dismissed]
             if (isChecked) {
-                state.add(enchant);
+                SELECTED_ENCHANTS.push(enchant);
             } else {
-                state.delete(enchant);
+                SELECTED_ENCHANTS = SELECTED_ENCHANTS.filter(io => io.name != enchant.name);
             }
 
             // Update the dom
@@ -138,16 +136,26 @@ function displayEnchantCheckboxes(enchants, filterName = "") {
 
 function displayEnchantLabels() {
     //
-    const match = [];
-    let exclude = [...ALL_NAMES];
-
     let matchString, excludeString;
+    const match = [];
 
-    if (SELECTED_NAMES.size > 0) {
+    // Unique exclude
+    let excludeSeen = [];
+    let exclude = [...ALL_ENCHANTS].map(io => io.enchantName).filter(io => {
+        if(excludeSeen.includes(io)) return false;
+        return excludeSeen.push(io), true;
+    });
+
+    //
+
+    if (SELECTED_ENCHANTS.length > 0) {
         //
-        for (let name of SELECTED_NAMES) {
-            match.push(name);
-            exclude = exclude.filter(io => io != name);
+        for (let item of SELECTED_ENCHANTS) {
+            // Add to the matches
+            match.push(item.name);
+
+            // Remove from the excluded
+            exclude = exclude.filter(io => io != item.enchantName);
         }
 
         //
@@ -162,7 +170,7 @@ function displayEnchantLabels() {
     DOM_OBJ_REFS["ENCHANTS_LABEL_OUTPUT_EXCLUDE"].textContent = excludeString;
 }
 
-function enableSearch(enchants) {
+function enableSearch(enchants = ALL_ENCHANTS) {
     // Get input ref
     const target = DOM_OBJ_REFS["ENCHANTS_SEARCH_INPUT"];
 
@@ -178,13 +186,13 @@ function enableSearch(enchants) {
 //
 async function main() {
     // Fetch the enchants file
-    const enchants = await fetchEnchants(ENCHANTS_URL);
+    await fetchEnchants(ENCHANTS_URL); // -> ALL_ENCHANTS
 
     // Push all enchants to the DOM
-    displayEnchantCheckboxes(enchants);
+    displayEnchantCheckboxes(ALL_ENCHANTS);
 
     // Enable search
-    enableSearch(enchants);
+    enableSearch(ALL_ENCHANTS);
 }
 
 // Pipeline
